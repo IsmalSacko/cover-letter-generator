@@ -32,7 +32,7 @@ class AppController extends AbstractController
                                 ['role'=>'user', 'content' =>'Entreprise cible: '.$cover['entreprise'] . '.'],
                                 ['role'=>'user', 'content' =>'Poste visé est :'.$cover['poste'] . '.'],
                                 ['role'=>'user', 'content' =>'Annone :'.$cover['annonce'] . '.'],
-                                ['role'=>'user', 'content'=>'Ecrivez votre lettre de motivation convaincante et personnalisée' . '.'],
+                                ['role'=>'user', 'content'=>'Ecrivez une lettre de motivation convaincante et personnalisée' . '.'],
                     ],
             ]);
                     $message = $response->toArray()['choices'][0]['message']['content'];
@@ -42,14 +42,16 @@ class AppController extends AbstractController
 
                     return $this->render('main/index.html.twig', [
 
-                        'message' => $pdf ->output('cover.pdf'),
+                        'message' => $pdf ->output('motivation.pdf'),
                         'cover' => $cover,
                     ]);
 
         }
+
         return $this->render('app/index.html.twig', [
             'form' => $form,
             'message' => $message ?? null,
+
         ]);
     }
 }

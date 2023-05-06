@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <h1 class="text-3xl font-bold text-indigo-500 text-center mt-3 mb-3">
+    <h1 class="text-3xl font-bold text-indigo-500 text-center mt-3 mb-5">
         <p>
             {% if(app.user) %}
             Bonjour {{ app.user.fullName }} 💕
@@ -26,20 +26,15 @@
             lettre de motivation dans les domaines de recherches d’emplois.
         </p>
         <p class="mb-3">
-            Ce système interagit avec une intelligence artificielle (<strong class="text-indigo-500 underline">OPENAI</strong>) qui, après avoir récolté les informations
+            Ce système interagit avec une intelligence artificielle (OPENAI) qui, après avoir récolté les informations
             que
             vous lui renseignerez à travers un formulaire, va vous générer une lettre de motivation personnalisée.
             Vous n’aurez à copier-coller le contenu, l’enrichir et le styliser pour l’envoyer avec vos candidatures.
         </p>
 
        <p class="mb-3">
-           Pour ce faire, vous tapez votre et prénom, le diplôme avec lequel souhaitez postuler, l’entreprise visée et
-           le
-           contenu de l’offre que vous consulter en ligne.
-
-           Une fois ces informations renseignées, c’est l’intelligence artificielle qui s’occupe du reste.
-           Nous vous souhaitons bonne chance dans vos recherches d’emplois.
-       </p>
+                Nous vous souhaitons bonne chance dans vos recherches d’emplois.
+         </p>
 
     </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Lettre de motivation{% endblock %}
+{% block title %}Hello AppController!{% endblock %}
 
 {% block body %}
     <div class="p-4 flex flex-col justify-center items-center">
@@ -13,7 +13,17 @@
         </div>
         {{ form_end(form) }}
         <hr>
-        {{ message }}
 
+        <page>
+            <page_header>
+
+            {{ cover.nom ?? '' }}
+            </page_header>
+
+            <page_footer>
+            </page_footer>
+                {{ message }}
+        </page>
     </div>
+
 {% endblock %}
