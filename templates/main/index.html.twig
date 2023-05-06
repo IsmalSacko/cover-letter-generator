@@ -4,25 +4,42 @@
 
 {% block body %}
 
-    <h1 class="text-3xl font-bold text-indigo-500 text-center">
-        <p>Vous êtes sur le du coverpro </p>
-
-
+    <h1 class="text-3xl font-bold text-indigo-500 text-center mt-3 mb-3">
+        <p>
+            {% if(app.user) %}
+            Bonjour {{ app.user.fullName }} 💕
+            {% else %}
+            Bonjour à vous 💕
+            {% endif %}
+        </p>
 
     </h1>
+    <div class="container text-justify text-xl">
+       <p class="mb-3">
+           Bienvenue sur notre de génération de lettre de motivation pour vous aider à rédiger vos lettres motivations
+           lorsque vous êtes à la recherche d’emplois.
+       </p>
+        <p class="mb-3">
+            Nous le savons : pendant la période de recherche d’emplois, la tâche la plus compliquée est la rédaction de
+            lette de motivions surtout quand il s’agit de l’adapter à chaque candidature.
+            Cela demande beaucoup de courage et motivation. C’est pour nous avons mis en place un petit de génération de
+            lettre de motivation dans les domaines de recherches d’emplois.
+        </p>
+        <p class="mb-3">
+            Ce système interagit avec une intelligence artificielle (<strong class="text-indigo-500 underline">OPENAI</strong>) qui, après avoir récolté les informations
+            que
+            vous lui renseignerez à travers un formulaire, va vous générer une lettre de motivation personnalisée.
+            Vous n’aurez à copier-coller le contenu, l’enrichir et le styliser pour l’envoyer avec vos candidatures.
+        </p>
 
-   {# <page backtop="20mm" backbottom="7mm" backleft="20mm" backright="20mm" backimgy="10mm">
-        <page_header>
-            <h1>{{ cover.nom }} {{ cover.prenom }}</h1>
-        </page_header>
-        <page_footer>
-            {{ cover.nom }} {{ cover.prenom }}
-            <h1>{{ cover.nom }} {{ cover.prenom }}</h1>
-        </page_footer>
+       <p class="mb-3">
+           Pour ce faire, vous tapez votre et prénom, le diplôme avec lequel souhaitez postuler, l’entreprise visée et
+           le
+           contenu de l’offre que vous consulter en ligne.
 
-       <p >
-           {{ message }}
+           Une fois ces informations renseignées, c’est l’intelligence artificielle qui s’occupe du reste.
+           Nous vous souhaitons bonne chance dans vos recherches d’emplois.
        </p>
 
-    </page>#}
+    </div>
 {% endblock %}

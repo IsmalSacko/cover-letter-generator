@@ -42,6 +42,10 @@
                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                                 Lettre de motivation
                             </a>
+                        <a href="https://ismaeldev.com"
+                           class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                            Aller sur notre site
+                        </a>
                     <div >
                         <ul class="navbar-nav ms-auto">
                             {% if app.user %}
@@ -56,7 +60,6 @@
                                         </a>
                                         <ul class="dropdown-menu text-white" aria-labelledby="dropdownMenuLink">
                                             <li>
-
                                                 <div class="dropdown-divider text-danger"></div>
                                                 <a class="dropdown-item" href="{{ path('app_logout') }}">
                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -82,7 +85,7 @@
                         {% else %}
                             <a href="{{ path('app_login') }}"
                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Se
-                                déconnecter
+                                connecter
                             </a>
                             <a href="{{ path('app_register') }}"
                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">S'inscrire
@@ -101,13 +104,6 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            {% if(app.user) %}
-            <a href="{{ path('app_logout') }}"
-               class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-               aria-current="page">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </a>
-            {% else %}
 
                 <a href="{{ path('cover') }}"
                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
@@ -127,7 +123,7 @@
                class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                 Lettre de motivation
             </a>
-            {% endif %}
+
         </div>
     </div>
 </nav>
